@@ -20,4 +20,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SimpleCalculatorActivity::class.java)
         startActivity(intent)
     }
+
+    fun goToInfo(view: View){
+        val intent = Intent(this, InfoActivity::class.java)
+        startActivity(intent)
+    }
 }

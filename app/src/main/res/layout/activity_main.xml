@@ -49,9 +49,10 @@
     <Button
         android:id="@+id/infoButton"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_height="wrap_content"
+        android:onClick="goToInfo"
         android:text="Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
