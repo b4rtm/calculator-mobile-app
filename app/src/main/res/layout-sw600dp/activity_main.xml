@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginEnd="200dp"
+        android:onClick="goToAdvancedCalculator"
         android:text="Kalkulator złożony"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"

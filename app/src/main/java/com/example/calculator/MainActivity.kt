@@ -21,8 +21,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun goToAdvancedCalculator(view: View){
+        val intent = Intent(this, AdvancedCalculatorActivity::class.java)
+        startActivity(intent)
+    }
+
     fun goToInfo(view: View){
         val intent = Intent(this, InfoActivity::class.java)
         startActivity(intent)
     }
+
+
 }

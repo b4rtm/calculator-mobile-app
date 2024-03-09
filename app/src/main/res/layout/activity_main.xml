@@ -37,9 +37,10 @@
     <Button
         android:id="@+id/advancedButton"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_height="wrap_content"
+        android:onClick="goToAdvancedCalculator"
         android:text="Kalkulator złożony"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
