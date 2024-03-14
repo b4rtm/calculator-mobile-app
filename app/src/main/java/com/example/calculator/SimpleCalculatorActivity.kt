@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import org.nfunk.jep.JEP
@@ -26,6 +27,8 @@ class SimpleCalculatorActivity : AppCompatActivity() {
     fun allClear(view : View){
         displayTextView.text = ""
         resultTextView.text = ""
+        isOperationPossible = false
+        isDecimalPossible = true
     }
 
     fun changeSign(view : View){
@@ -36,12 +39,20 @@ class SimpleCalculatorActivity : AppCompatActivity() {
             displayTextView.text = "-"
             displayTextView.append(originalText)
         }
-
     }
 
     fun backspaceAction(view : View){
-        if(displayTextView.text.isNotEmpty())
+        if(displayTextView.text.isNotEmpty()){
+            val ch = displayTextView.text.last()
+            if(ch == '/' || ch == '*' || ch == '-' || ch == '+'){
+                isOperationPossible = true;
+            }
             displayTextView.text = displayTextView.text.substring(0,displayTextView.text.length-1)
+        }
+        if (displayTextView.text.isEmpty()){
+            isOperationPossible = false
+            isDecimalPossible = true
+        }
     }
 
     fun operationAction(view : View){
@@ -56,7 +67,15 @@ class SimpleCalculatorActivity : AppCompatActivity() {
     fun calculateAction(view : View){
     val jep = JEP()
     jep.parseExpression(displayTextView.text.toString())
-    resultTextView.text = jep.value.toString()
+    if(jep.hasError())
+        Toast.makeText(this, "Incorrect input", Toast.LENGTH_SHORT).show()
+    else {
+        val result = jep.value.toString()
+        if (result.length > 12)
+            resultTextView.text = result.substring(0, 12)
+        else
+            resultTextView.text = result
+    }
     }
 
     fun numberAction(view : View){

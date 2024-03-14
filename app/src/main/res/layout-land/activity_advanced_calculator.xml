@@ -7,7 +7,6 @@
     android:padding="16dp">
 
 
-    <!-- Wiersz 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,12 +14,12 @@
         <TextView
             android:id="@+id/displayTextView"
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="50dp"
             android:gravity="end"
             android:layout_weight="1"
             android:text=""
             android:textColor="#000000"
-            android:textSize="70sp" />
+            android:textSize="35sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -30,19 +29,103 @@
         <TextView
             android:id="@+id/resultTextView"
             android:layout_width="0dp"
-            android:layout_height="250dp"
-            android:gravity="end"
+            android:layout_height="70dp"
             android:layout_weight="1"
+            android:gravity="end"
             android:text=""
             android:textColor="#000000"
-            android:textSize="100sp" />
+            android:textSize="55sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <!-- Wiersz 2 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="sqrt"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="x^2"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="x^y"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="%"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="sin"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="cos"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="tan"
+                android:textSize="11sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#838181"
+                android:onClick="singleOperatorAction"
+                android:text="ln"
+                android:textSize="11sp" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -55,7 +138,7 @@
                 android:backgroundTint="#838181"
                 android:onClick="allClear"
                 android:text="AC"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -64,7 +147,7 @@
                 android:backgroundTint="#838181"
                 android:onClick="backspaceAction"
                 android:text="bksp"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -73,7 +156,7 @@
                 android:backgroundTint="#838181"
                 android:onClick="changeSign"
                 android:text="+/-"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -82,7 +165,7 @@
                 android:backgroundTint="#FF9800"
                 android:onClick="operationAction"
                 android:text="/"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,7 +180,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="7"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -106,7 +189,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="8"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -115,7 +198,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="9"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -124,7 +207,7 @@
                 android:backgroundTint="#FF9800"
                 android:onClick="operationAction"
                 android:text="*"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,7 +222,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="4"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -148,7 +231,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="5"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -156,7 +239,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
-                android:textSize="40sp"
+                android:textSize="11sp"
                 android:text="6" />
 
             <Button
@@ -181,7 +264,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="1"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -190,7 +273,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="2"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -199,7 +282,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="3"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -208,7 +291,7 @@
                 android:backgroundTint="#FF9800"
                 android:onClick="operationAction"
                 android:text="+"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,7 +306,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="numberAction"
                 android:text="0"
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -232,7 +315,7 @@
                 android:backgroundTint="#514C4C"
                 android:onClick="decimalAction"
                 android:text="."
-                android:textSize="70sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:layout_width="0dp"
@@ -241,7 +324,7 @@
                 android:backgroundTint="#FF5722"
                 android:onClick="calculateAction"
                 android:text="="
-                android:textSize="40sp" />
+                android:textSize="11sp" />
 
         </LinearLayout>
     </LinearLayout>
