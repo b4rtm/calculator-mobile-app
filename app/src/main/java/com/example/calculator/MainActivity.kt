@@ -31,5 +31,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun goToExit(view: View){
+        finishAffinity()
+    }
+
 
 }
