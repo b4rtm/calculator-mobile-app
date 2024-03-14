@@ -27,15 +27,23 @@ class SimpleCalculatorActivity : AppCompatActivity() {
         displayTextView.text = ""
         resultTextView.text = ""
     }
-//
-//    fun changeSign(view : View){
-//
-//    }
-//
-//    fun clearEnter(view : View){
-//
-//    }
-//
+
+    fun changeSign(view : View){
+        val originalText = displayTextView.text.toString()
+        if(originalText.get(0) == '-')
+            displayTextView.text=originalText.substring(1)
+        else{
+            displayTextView.text = "-"
+            displayTextView.append(originalText)
+        }
+
+    }
+
+    fun backspaceAction(view : View){
+        if(displayTextView.text.isNotEmpty())
+            displayTextView.text = displayTextView.text.substring(0,displayTextView.text.length-1)
+    }
+
     fun operationAction(view : View){
     if (isOperationPossible && view is Button) {
         displayTextView.append(view.text)
