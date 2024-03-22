@@ -1,6 +1,7 @@
 package com.example.calculator
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -22,6 +23,17 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_advanced_calculator)
         displayTextView = findViewById(R.id.displayTextView)
         resultTextView = findViewById(R.id.resultTextView)
+
+        if (savedInstanceState != null) {
+            displayTextView.text = savedInstanceState.getString("displayText")
+            resultTextView.text = savedInstanceState.getString("resultText")
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("displayText", displayTextView.text.toString())
+        outState.putString("resultText", resultTextView.text.toString())
     }
 
     fun allClear(view : View){
