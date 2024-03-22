@@ -7,8 +7,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import org.nfunk.jep.JEP
 
 class AdvancedCalculatorActivity : AppCompatActivity() {
@@ -74,11 +72,15 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
         if(jep.hasError())
             Toast.makeText(this, "Incorrect input", Toast.LENGTH_SHORT).show()
         else {
-            val result = jep.value.toString()
-            if(result.length > 12)
-                resultTextView.text = result.substring(0,12)
-            else
-                resultTextView.text = result
+            var result = jep.value
+            if (result % 1 == 0.0) {
+                resultTextView.text = result.toInt().toString()
+            } else {
+                if (result.toString().length > 12)
+                    resultTextView.text = result.toString().substring(0, 12)
+                else
+                    resultTextView.text = result.toString()
+            }
         }
     }
 

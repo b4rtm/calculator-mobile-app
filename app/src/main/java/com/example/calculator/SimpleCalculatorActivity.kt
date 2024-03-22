@@ -65,17 +65,21 @@ class SimpleCalculatorActivity : AppCompatActivity() {
     }
 
     fun calculateAction(view : View){
-    val jep = JEP()
-    jep.parseExpression(displayTextView.text.toString())
-    if(jep.hasError())
-        Toast.makeText(this, "Incorrect input", Toast.LENGTH_SHORT).show()
-    else {
-        val result = jep.value.toString()
-        if (result.length > 12)
-            resultTextView.text = result.substring(0, 12)
-        else
-            resultTextView.text = result
-    }
+        val jep = JEP()
+        jep.parseExpression(displayTextView.text.toString())
+        if(jep.hasError())
+            Toast.makeText(this, "Incorrect input", Toast.LENGTH_SHORT).show()
+        else {
+            val result = jep.value
+            if (result % 1 == 0.0) {
+                resultTextView.text = result.toInt().toString()
+            } else {
+                if (result.toString().length > 12)
+                    resultTextView.text = result.toString().substring(0, 12)
+                else
+                    resultTextView.text = result.toString()
+            }
+        }
     }
 
     fun numberAction(view : View){

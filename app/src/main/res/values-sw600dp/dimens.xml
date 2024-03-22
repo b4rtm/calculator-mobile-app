@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="display_font">70sp</dimen>
+    <dimen name="result_font">100sp</dimen>
+    <dimen name="button_font">40sp</dimen>
+    <dimen name="main_font">80sp</dimen>
+    <dimen name="margin">180dp</dimen>
+</resources>
