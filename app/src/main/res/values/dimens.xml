@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="display_font">55sp</dimen>
-    <dimen name="result_font">90sp</dimen>
+    <dimen name="result_font">60sp</dimen>
     <dimen name="button_font">20sp</dimen>
     <dimen name="main_font">60sp</dimen>
     <dimen name="margin">100dp</dimen>
+    <dimen name="info_font">25sp</dimen>
 </resources>

@@ -62,7 +62,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#838181"
                 android:onClick="backspaceAction"
-                android:text="bksp"
+                android:text="bkp"
                 android:textSize="@dimen/button_font" />
 
             <Button

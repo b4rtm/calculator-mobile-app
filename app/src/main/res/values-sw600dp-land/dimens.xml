@@ -4,5 +4,6 @@
     <dimen name="result_font">105sp</dimen>
     <dimen name="button_font">40sp</dimen>
     <dimen name="main_font">80sp</dimen>
-    <dimen name="margin">110dp</dimen>
+    <dimen name="margin">80dp</dimen>
+    <dimen name="info_font">45sp</dimen>
 </resources>

@@ -18,7 +18,6 @@ class SimpleCalculatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_simple_calculator)
         displayTextView = findViewById(R.id.displayTextView)
         resultTextView = findViewById(R.id.resultTextView)
@@ -67,12 +66,12 @@ class SimpleCalculatorActivity : AppCompatActivity() {
     }
 
     fun operationAction(view : View){
-    if (isOperationPossible && view is Button) {
-        displayTextView.append(view.text)
-        isOperationPossible = false
-        isDecimalPossible = true
+        if (isOperationPossible && view is Button) {
+            displayTextView.append(view.text)
+            isOperationPossible = false
+            isDecimalPossible = true
 
-    }
+        }
     }
 
     fun calculateAction(view : View){
@@ -86,7 +85,7 @@ class SimpleCalculatorActivity : AppCompatActivity() {
                 resultTextView.text = result.toInt().toString()
             } else {
                 if (result.toString().length > 12)
-                    resultTextView.text = result.toString().substring(0, 12)
+                    resultTextView.text = result.toString().substring(0, 11)
                 else
                     resultTextView.text = result.toString()
             }

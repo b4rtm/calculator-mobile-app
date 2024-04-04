@@ -19,7 +19,6 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_advanced_calculator)
         displayTextView = findViewById(R.id.displayTextView)
         resultTextView = findViewById(R.id.resultTextView)
@@ -89,7 +88,7 @@ class AdvancedCalculatorActivity : AppCompatActivity() {
                 resultTextView.text = result.toInt().toString()
             } else {
                 if (result.toString().length > 12)
-                    resultTextView.text = result.toString().substring(0, 12)
+                    resultTextView.text = result.toString().substring(0, 11)
                 else
                     resultTextView.text = result.toString()
             }

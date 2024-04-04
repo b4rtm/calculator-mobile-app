@@ -3,4 +3,6 @@
     <dimen name="display_font">35sp</dimen>
     <dimen name="result_font">40sp</dimen>
     <dimen name="button_font">11sp</dimen>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="info_font">20sp</dimen>
 </resources>
